@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Background with Video</title>
+    <title>fnc</title>
     <style>
         body {
             margin: 0;
@@ -20,24 +20,19 @@
             z-index: -1; /* Place the video behind other elements */
         }
 
-        #content {
+        #iframe-container {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: #fff;
-            z-index: 1; /* Place the content above the video */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1; /* Place the iframe above the video */
         }
 
-        #website-link {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #3498db;
-            color: #fff;
-            text-decoration: none;
-            font-size: 18px;
-            border-radius: 5px;
+        #website-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
     </style>
 </head>
@@ -48,10 +43,8 @@
     Your browser does not support the video tag.
 </video>
 
-<div id="content">
-    <h1>Welcome to My Website</h1>
-    <p>Explore more by clicking the link below:</p>
-    <a href="https://www.example.com" id="website-link">Visit Website</a>
+<div id="iframe-container">
+    <iframe id="website-iframe" src="https://ecard.enter-media.org/widgets/2206433/?title=Stream+starting+timer+transparent+back&layer1=&line=BIG+BANG+EVENT+IN%3A&size1=6&color1=FFFFFF&font1=2139702&offset1=-120&line2=Numbers&size2=20&color2=FFFFFF&font2=2139174&offset2=50&line3=Text&size3=5&color3=FFFFFF&font3=2139702&offset3=200&css=2155108&month=Dec&day=3&year=2023&hour=6&min=00&countlang=en&webm=2206434&dots=No&frame=1" frameborder="0"></iframe>
 </div>
 
 </body>
