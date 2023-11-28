@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Background with Video</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden; /* Prevent default browser scrollbars */
+        }
+
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Place the video behind other elements */
+        }
+
+        #content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            z-index: 1; /* Place the content above the video */
+        }
+
+        #website-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<video id="video-background" autoplay muted loop>
+    <source src="your-video-file.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<div id="content">
+    <h1>Welcome to My Website</h1>
+    <p>Explore more by clicking the link below:</p>
+    <a href="https://www.example.com" id="website-link">Visit Website</a>
+</div>
+
+</body>
+</html>
